@@ -20,10 +20,13 @@
         </div>
       </nav>
     </div>
+    <SocialBar />
   </footer>
 </template>
 
 <script>
+import SocialBar from './SocialBar.vue'
+
 export default {
   name: 'FooterSite',
   data () {
@@ -135,8 +138,38 @@ export default {
           href: '#',
           text: 'DC power visa'
         }
+      ],
+      socialIcons: [
+        {
+          alt: 'Facebook',
+          img: 'footer-facebook.png',
+          link: '#'
+        },
+        {
+          alt: 'Twitter',
+          img: 'footer-twitter.png',
+          link: '#'
+        },
+        {
+          alt: 'YouTube',
+          img: 'footer-youtube.png',
+          link: '#'
+        },
+        {
+          alt: 'Pinterest',
+          img: 'footer-pinterest.png',
+          link: '#'
+        },
+        {
+          alt: 'Periscope',
+          img: 'footer-periscope.png',
+          link: '#'
+        }
       ]
     }
+  },
+  components: {
+    SocialBar
   }
 }
 </script>
@@ -146,7 +179,7 @@ export default {
 
 footer {
   background-image: url('../assets/img/footer-bg.jpg');
-  padding: 2rem 0.5rem;
+  padding: 2rem 0 0 0;
 
     > div {
         display: flex;
