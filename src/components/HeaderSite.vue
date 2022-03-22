@@ -3,7 +3,7 @@
   <div class='container header'>
     <img src="../assets/img/dc-logo.png" alt="DC logo">
     <nav>
-      <a v-for="(link, index) in menuLinks" :key="index" :href="link.href"><span>{{ link.text }}</span></a>
+      <a v-for="(link, index) in menuLinks" :key="index" :href="link.href" @click="activeLink=index" :class="activeLink==index ? 'active' : ''"><span>{{ link.text }}</span></a>
     </nav>
   </div>
 </header>
@@ -14,6 +14,7 @@ export default {
   name: 'HeaderSite',
   data () {
     return {
+      activeLink: 0,
       menuLinks: [
         {
           href: '#',
@@ -94,6 +95,11 @@ a {
       color: $primary-color;
     }
 }
+
+.active {
+      border-bottom: 0.3rem $primary-color solid;
+      color: $primary-color;
+    }
 
 img {
   height: 5rem;
