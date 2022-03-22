@@ -179,9 +179,9 @@ export default {
 
 footer {
   background-image: url('../assets/img/footer-bg.jpg');
-  padding: 2rem 0 0 0;
 
     > div {
+        padding: 2rem 0;
         display: flex;
         justify-content: space-between;
         background-image: url('../assets/img/dc-logo-bg.png');
@@ -211,7 +211,7 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin: 1rem 2rem;
+      margin: 0 2rem 1rem 0;
       font-size: 0.75rem;
     }
 }
@@ -226,4 +226,5 @@ a {
       color: #fff;
     }
 }
+
 </style>

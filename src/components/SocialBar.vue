@@ -1,10 +1,12 @@
 <template>
   <section class="social-bar">
-    <button>sign-up now</button>
-    <nav>
-      <h2>follow us</h2>
-      <a :href="social.link" v-for="(social, index) in socialIcons" :key="index"><img :src="'../assets/img/' + social.img" :alt="social.alt"></a>
-    </nav>
+    <div class="container">
+      <button>sign-up now</button>
+      <nav>
+        <h2>follow us</h2>
+        <a :href="social.link" v-for="(social, index) in socialIcons" :key="index"><img :src="'../assets/img/' + social.img" :alt="social.alt"></a>
+      </nav>
+    </div>
   </section>
 </template>
 
@@ -50,10 +52,13 @@ export default {
 
 .social-bar {
   background-color: $social-bar-bkg;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 2rem 0.5rem;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 }
 
 nav {
@@ -69,6 +74,18 @@ nav {
 img {
   display: block;
   margin: 1rem;
+}
+
+button {
+  background-color: transparent;
+  border: 2px $primary-color solid;
+  color: $footer-title-color;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
 }
 
 </style>
