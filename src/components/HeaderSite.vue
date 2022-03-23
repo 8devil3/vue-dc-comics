@@ -62,7 +62,7 @@ export default {
 @import '../assets/scss/partials/_variables.scss';
 
 header {
-  padding: 1rem;
+  padding: 0 0.5rem;
 }
 
 .header {
@@ -105,6 +105,7 @@ img {
   height: 5rem;
   width: 5rem;
   display: block;
+  margin: 1rem 0;
 }
 
 </style>

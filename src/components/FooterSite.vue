@@ -181,7 +181,7 @@ footer {
   background-image: url('../assets/img/footer-bg.jpg');
 
     > div {
-        padding: 2rem 0;
+        padding: 2rem 0.5rem;
         display: flex;
         justify-content: space-between;
         background-image: url('../assets/img/dc-logo-bg.png');
@@ -214,16 +214,16 @@ nav {
       margin: 0 2rem 1rem 0;
       font-size: 0.75rem;
     }
-}
 
-a {
-  display: block;
-  padding: 0.25rem 0;
-  color: $footer-menu-color;
-  text-transform: capitalize;
+    a {
+      display: block;
+      padding: 0.25rem 0;
+      color: $footer-menu-color;
+      text-transform: capitalize;
 
-    &:hover {
-      color: #fff;
+        &:hover {
+          color: #fff;
+        }
     }
 }
 
