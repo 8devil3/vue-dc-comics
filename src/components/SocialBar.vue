@@ -1,13 +1,13 @@
 <template>
-  <section class="social-bar">
-    <div class="container">
-      <button>sign-up now</button>
-      <nav>
-        <h2>follow us</h2>
-        <a :href="social.link" v-for="(social, index) in socialIcons" :key="index"><img :src="'../assets/img/' + social.img" :alt="social.alt"></a>
-      </nav>
-    </div>
-  </section>
+<section id="social-bar-wrapper">
+  <div class="container">
+    <button class="btn-footer">sign-up now</button>
+    <nav>
+      <h2>follow us</h2>
+      <a :href="social.link" v-for="(social, index) in socialIcons" :key="index"><img :src="require('../assets/img/' + social.img)" :alt="social.alt"></a>
+    </nav>
+  </div>
+</section>
 </template>
 
 <script>
@@ -49,43 +49,30 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/scss/partials/_variables.scss';
+@import '../assets/scss/partials/_mixin.scss';
 
-.social-bar {
+#social-bar-wrapper {
   background-color: $social-bar-bkg;
   padding: 2rem 0.5rem;
 
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  .container {
+    @include flex(row, space-between);
+
+    nav {
+      @include flex();
+
+      h2 {
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-right: 1rem;
+      }
+
+      img {
+        display: block;
+        margin: 0.5rem;
+      }
     }
-}
-
-nav {
-  display: flex;
-  align-items: center;
-
-  h2 {
-    color: $primary-color;
-    text-transform: uppercase;
   }
-}
-
-img {
-  display: block;
-  margin: 1rem;
-}
-
-button {
-  background-color: transparent;
-  border: 2px $primary-color solid;
-  color: $footer-title-color;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 0.75rem;
-  cursor: pointer;
 }
 
 </style>
