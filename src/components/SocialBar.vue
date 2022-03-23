@@ -67,6 +67,10 @@ export default {
         margin-right: 1rem;
       }
 
+      a:hover {
+        filter: brightness(1.5);
+      }
+
       img {
         display: block;
         margin: 0.5rem;
